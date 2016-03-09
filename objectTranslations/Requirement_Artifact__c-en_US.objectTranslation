@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Requirement Artifact</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Requirement Artifacts</value>
+    </caseValues>
+    <fields>
+        <label><!-- Action Type --></label>
+        <name>Action_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Action --></label>
+        <name>Action__c</name>
+        <relationshipLabel><!-- Requirement --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Approval Process --></label>
+        <name>Approval_Process__c</name>
+        <relationshipLabel><!-- Requirement --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Approval Step --></label>
+        <name>Approval_Step__c</name>
+        <relationshipLabel><!-- Requirement --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Change Description --></label>
+        <name>Change_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Changed By --></label>
+        <name>Changed_By__c</name>
+        <picklistValues>
+            <masterLabel>Deep</masterLabel>
+            <translation><!-- Deep --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nitesh</masterLabel>
+            <translation><!-- Nitesh --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Controller --></label>
+        <name>Controller__c</name>
+        <relationshipLabel><!-- Requirement --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Object --></label>
+        <name>Object__c</name>
+        <relationshipLabel><!-- Requirement --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Requirement Type --></label>
+        <name>Requirement_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Requirement --></label>
+        <name>Requirement__c</name>
+        <relationshipLabel><!-- Requirement Artifacts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Trigger --></label>
+        <name>Trigger__c</name>
+        <relationshipLabel><!-- Requirement --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Validation Rule --></label>
+        <name>Validation_Rule__c</name>
+        <relationshipLabel><!-- Requirement --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Visualforce Page --></label>
+        <name>Visualforce_Page__c</name>
+        <relationshipLabel><!-- Requirement --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Workflow Rule --></label>
+        <name>Workflow_Rule__c</name>
+        <relationshipLabel><!-- Requirement --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Requirement affecting Action</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Requirement affecting Approval Process</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Requirement affecting Approval Step</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Requirement affecting Controller</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Requirement affecting Object</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Requirement affecting Trigger</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Requirement affecting Validation Rule</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Requirement affecting Visualforce Page</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Requirement affecting Workflow Rule</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Requirement affecting Action --></label>
+        <name>Requirement_affecting_Action</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Requirement affecting Approval Process --></label>
+        <name>Requirement_affecting_Approval_Process</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Requirement affecting Approval Step --></label>
+        <name>Requirement_affecting_Approval_Step</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Requirement affecting Controller --></label>
+        <name>Requirement_affecting_Controller</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Requirement affecting Object --></label>
+        <name>Requirement_affecting_Object</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Requirement affecting Trigger --></label>
+        <name>Requirement_affecting_Trigger</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Requirement affecting Validation Rule --></label>
+        <name>Requirement_affecting_Validation_Rule</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Requirement affecting Visualforce Page --></label>
+        <name>Requirement_affecting_Visualforce_Page</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Requirement affecting Workflow Rule --></label>
+        <name>Requirement_affecting_Workflow_Rule</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

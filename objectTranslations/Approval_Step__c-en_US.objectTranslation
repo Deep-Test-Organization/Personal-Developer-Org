@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Approval Step</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Approval Steps</value>
+    </caseValues>
+    <fields>
+        <label><!-- Assigned Approver --></label>
+        <name>Assigned_Approver__c</name>
+    </fields>
+    <fields>
+        <label><!-- Changed By --></label>
+        <name>Changed_By__c</name>
+        <picklistValues>
+            <masterLabel>Deep</masterLabel>
+            <translation><!-- Deep --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nitesh</masterLabel>
+            <translation><!-- Nitesh --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Criteria 1 --></label>
+        <name>Criteria_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Criteria 2 --></label>
+        <name>Criteria_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Criteria --></label>
+        <name>Criteria__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Related to Approval Process --></label>
+        <name>Related_to_Approval_Process__c</name>
+        <relationshipLabel><!-- Approval Steps --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Request --></label>
+        <name>Request__c</name>
+        <relationshipLabel><!-- Approval Steps --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Step Number --></label>
+        <name>Step_Number__c</name>
+    </fields>
+    <layouts>
+        <layout>Approval Step Layout</layout>
+        <sections>
+            <label><!-- Constitutes of Criteria --></label>
+            <section>Constitutes of Criteria</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

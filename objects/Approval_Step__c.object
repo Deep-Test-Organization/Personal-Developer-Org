@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>It define to whom an approval request is routed, as well as any actions that should be performed upon approval or rejection.</description>
+    <enableActivities>true</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Assigned_Approver__c</fullName>
+        <description>Approver who will approver/reject the approval process.</description>
+        <externalId>false</externalId>
+        <label>Assigned Approver</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Changed_By__c</fullName>
+        <description>Who has updated the approval step</description>
+        <externalId>false</externalId>
+        <label>Changed By</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Nitesh</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Deep</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Criteria_1__c</fullName>
+        <description>It consists first 255 characters of the approval step criteria.</description>
+        <externalId>false</externalId>
+        <label>Criteria 1</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Criteria_2__c</fullName>
+        <description>It consists part of approval step criteria that is after first 255 characters of the approval step criteria.</description>
+        <externalId>false</externalId>
+        <label>Criteria 2</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Criteria__c</fullName>
+        <description>Criteria for entering the approval step</description>
+        <externalId>false</externalId>
+        <label>Criteria</label>
+        <length>131072</length>
+        <trackHistory>true</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <description>It captures all the details about the approval step.</description>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <length>32768</length>
+        <trackHistory>true</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Related_to_Approval_Process__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Approval process to which the approval step is related.</description>
+        <externalId>false</externalId>
+        <label>Related to Approval Process</label>
+        <referenceTo>Approval_Process__c</referenceTo>
+        <relationshipLabel>Approval Steps</relationshipLabel>
+        <relationshipName>Approval_Steps</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Request__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>It consists of user story, change request, ticket which impacts the components.</description>
+        <externalId>false</externalId>
+        <label>Request</label>
+        <referenceTo>Requirement__c</referenceTo>
+        <relationshipLabel>Approval Steps</relationshipLabel>
+        <relationshipName>Approval_Steps</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Step_Number__c</fullName>
+        <description>Step number.</description>
+        <externalId>false</externalId>
+        <label>Step Number</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Approval Step</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Related_to_Approval_Process__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Approval Step Name</label>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Approval Steps</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

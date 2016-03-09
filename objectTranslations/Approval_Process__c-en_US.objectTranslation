@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Approval Process</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Approval Processes</value>
+    </caseValues>
+    <fields>
+        <label><!-- Changed By --></label>
+        <name>Changed_By__c</name>
+        <picklistValues>
+            <masterLabel>Deep</masterLabel>
+            <translation><!-- Deep --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nitesh</masterLabel>
+            <translation><!-- Nitesh --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Entry Criteria 1 --></label>
+        <name>Entry_Criteria_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Entry Criteria 2 --></label>
+        <name>Entry_Criteria_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Entry Criteria --></label>
+        <name>Entry_Criteria__c</name>
+    </fields>
+    <fields>
+        <label><!-- Related to Object --></label>
+        <name>Related_to_Object__c</name>
+        <relationshipLabel><!-- Approval Processes --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Request --></label>
+        <name>Request__c</name>
+        <relationshipLabel><!-- Approval Processes --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Approval Process Layout</layout>
+        <sections>
+            <label><!-- Constitutes of Entry Criteria --></label>
+            <section>Constitutes of Entry Criteria</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

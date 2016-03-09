@@ -1,0 +1,16 @@
+<apex:page >
+    <apex:includeScript value="/lightning/lightning.out.js" /> 
+
+    <div id="lightning" />
+
+    <script>
+        $Lightning.use("c:helloWorldApp", function() {
+          $Lightning.createComponent("c.CalculateTotal",
+          { label : "Press Me!" },
+          "lightning",
+          function(cmp) {
+            // do some stuff
+          });
+        });
+    </script>
+</apex:page>

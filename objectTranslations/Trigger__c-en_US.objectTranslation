@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Trigger</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Triggers</value>
+    </caseValues>
+    <fields>
+        <label><!-- Change Description --></label>
+        <name>Change_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Changed By --></label>
+        <name>Changed_By__c</name>
+        <picklistValues>
+            <masterLabel>Deep</masterLabel>
+            <translation><!-- Deep --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nitesh</masterLabel>
+            <translation><!-- Nitesh --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Related To Object --></label>
+        <name>Related_To_Object__c</name>
+        <relationshipLabel><!-- Triggers --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Request --></label>
+        <name>Request__c</name>
+        <relationshipLabel><!-- Triggers --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Trigger Type --></label>
+        <name>Trigger_Type__c</name>
+        <picklistValues>
+            <masterLabel>After Delete</masterLabel>
+            <translation><!-- After Delete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>After Insert</masterLabel>
+            <translation><!-- After Insert --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>After Undelete</masterLabel>
+            <translation><!-- After Undelete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>After Update</masterLabel>
+            <translation><!-- After Update --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Before Delete</masterLabel>
+            <translation><!-- Before Delete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Before Insert</masterLabel>
+            <translation><!-- Before Insert --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Before Update</masterLabel>
+            <translation><!-- Before Update --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Trigger Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Test_PopUp --></label>
+        <name>Test_PopUp</name>
+    </webLinks>
+</CustomObjectTranslation>

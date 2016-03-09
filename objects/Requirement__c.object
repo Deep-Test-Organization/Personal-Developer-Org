@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>It consists of all the user stories, change requests, tickets which impacts the components.</description>
+    <enableActivities>true</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Related_User_Story__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>It captures the user story related to ticket.</description>
+        <externalId>false</externalId>
+        <label>Related User Story</label>
+        <referenceTo>Requirement__c</referenceTo>
+        <relationshipLabel>Tickets</relationshipLabel>
+        <relationshipName>Requirements</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Requirement_Description__c</fullName>
+        <description>Description of requirement.</description>
+        <externalId>false</externalId>
+        <label>Requirement Description</label>
+        <length>32768</length>
+        <trackHistory>true</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Requirement_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>RecordType.DeveloperName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Requirement Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sprint__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>The sprint under which the requirement comes.</description>
+        <externalId>false</externalId>
+        <label>Sprint</label>
+        <referenceTo>Sprint__c</referenceTo>
+        <relationshipLabel>Allocated User Stories</relationshipLabel>
+        <relationshipName>Requirements</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <label>Requirement</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Requirement_Type__c</columns>
+        <columns>Related_User_Story__c</columns>
+        <columns>Sprint__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Requirement Name</label>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Requirements</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>HyperCare</fullName>
+        <active>true</active>
+        <description>It captures the hypercare tickets</description>
+        <label>HyperCare</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Ticket</fullName>
+        <active>true</active>
+        <description>It captures the tickets.</description>
+        <label>Ticket</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>User_Story</fullName>
+        <active>true</active>
+        <description>It captures the user stories.</description>
+        <label>User Story</label>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>Requirement_Type__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Related_User_Story__c</customTabListAdditionalFields>
+        <searchResultsAdditionalFields>Requirement_Type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Related_User_Story__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

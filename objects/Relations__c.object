@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>It is a junction object which establishes many to many relationship between artifacts.</description>
+    <enableActivities>false</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Action_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>Action__r.RecordType.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Action Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Action__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Action</label>
+        <referenceTo>Action__c</referenceTo>
+        <relationshipLabel>Related To</relationshipLabel>
+        <relationshipName>Relations</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Approval_Process__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Approval Process</label>
+        <referenceTo>Approval_Process__c</referenceTo>
+        <relationshipLabel>Related Actions</relationshipLabel>
+        <relationshipName>Relations</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Approval_Step__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Approval Step</label>
+        <referenceTo>Approval_Step__c</referenceTo>
+        <relationshipLabel>Related Actions</relationshipLabel>
+        <relationshipName>Relations</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Child__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Child</label>
+        <referenceTo>Object__c</referenceTo>
+        <relationshipLabel>Child of</relationshipLabel>
+        <relationshipName>Relations1</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Controller__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Controller</label>
+        <referenceTo>Controller__c</referenceTo>
+        <relationshipLabel>Related VF Pages</relationshipLabel>
+        <relationshipName>Relations</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Event_Type__c</fullName>
+        <description>Event at which the the action take place.</description>
+        <externalId>false</externalId>
+        <label>Event Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Before Insert</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Before Update</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Before Delete</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>After Insert</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>After Update</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>After Delete</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>After Undelete</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <type>MultiselectPicklist</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Handler__c</fullName>
+        <description>Controller of the method</description>
+        <externalId>false</externalId>
+        <formula>Action__r.Controller__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Handler</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Parent__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Parent</label>
+        <referenceTo>Object__c</referenceTo>
+        <relationshipLabel>Parent of</relationshipLabel>
+        <relationshipName>Relations</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Trigger__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Trigger</label>
+        <referenceTo>Trigger__c</referenceTo>
+        <relationshipLabel>Related Actions</relationshipLabel>
+        <relationshipName>Relations</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Type_of_Action__c</fullName>
+        <description>Type of approval action</description>
+        <externalId>false</externalId>
+        <label>Type of Action</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Initial Submission Actions</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Final Approval Actions</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Final Rejection Actions</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Approval Actions</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rejection Actions</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Visualforce_Page__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Visualforce Page</label>
+        <referenceTo>Visualforce_Page__c</referenceTo>
+        <relationshipLabel>Related Controllers</relationshipLabel>
+        <relationshipName>Relations</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Workflow_Rule__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Workflow Rule</label>
+        <referenceTo>Workflow_Rule__c</referenceTo>
+        <relationshipLabel>Related Actions</relationshipLabel>
+        <relationshipName>Relations</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <label>Relation</label>
+    <nameField>
+        <displayFormat>R-{0000}</displayFormat>
+        <label>Relation Number</label>
+        <trackHistory>true</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Relations</pluralLabel>
+    <recordTypeTrackHistory>true</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Approval_Process_to_Action</fullName>
+        <active>true</active>
+        <description>Relates approval process with the associated actions.</description>
+        <label>Approval Process to Action</label>
+        <picklistValues>
+            <picklist>Event_Type__c</picklist>
+            <values>
+                <fullName>After Delete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>After Insert</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>After Undelete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>After Update</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Before Delete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Before Insert</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Before Update</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type_of_Action__c</picklist>
+            <values>
+                <fullName>Final Approval Actions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Final Rejection Actions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Initial Submission Actions</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Approval_Step_to_Action</fullName>
+        <active>true</active>
+        <description>Relates approval steps with the associated actions.</description>
+        <label>Approval Step to Action</label>
+        <picklistValues>
+            <picklist>Event_Type__c</picklist>
+            <values>
+                <fullName>After Delete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>After Insert</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>After Undelete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>After Update</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Before Delete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Before Insert</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Before Update</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type_of_Action__c</picklist>
+            <values>
+                <fullName>Approval Actions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejection Actions</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Controller_to_VF_Page</fullName>
+        <active>true</active>
+        <description>Relates controller with the associated vf pages.</description>
+        <label>Controller to VF Page</label>
+        <picklistValues>
+            <picklist>Event_Type__c</picklist>
+            <values>
+                <fullName>After Delete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>After Insert</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>After Undelete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>After Update</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Before Delete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Before Insert</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Before Update</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type_of_Action__c</picklist>
+            <values>
+                <fullName>Final Approval Actions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Final Rejection Actions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Initial Submission Actions</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Object_to_Object</fullName>
+        <active>true</active>
+        <description>parent to child relationship between object</description>
+        <label>Object to Object</label>
+        <picklistValues>
+            <picklist>Event_Type__c</picklist>
+            <values>
+                <fullName>After Delete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>After Insert</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>After Undelete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>After Update</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Before Delete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Before Insert</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Before Update</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type_of_Action__c</picklist>
+            <values>
+                <fullName>Final Approval Actions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Final Rejection Actions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Initial Submission Actions</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Trigger_To_Method</fullName>
+        <active>true</active>
+        <description>Relates triggers with the associated methods.</description>
+        <label>Trigger To Method</label>
+        <picklistValues>
+            <picklist>Event_Type__c</picklist>
+            <values>
+                <fullName>After Delete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>After Insert</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>After Undelete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>After Update</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Before Delete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Before Insert</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Before Update</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type_of_Action__c</picklist>
+            <values>
+                <fullName>Final Approval Actions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Final Rejection Actions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Initial Submission Actions</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Workflow_to_Action</fullName>
+        <active>true</active>
+        <description>Relates workflow rules with the associated workflow actions</description>
+        <label>Workflow to Action</label>
+        <picklistValues>
+            <picklist>Event_Type__c</picklist>
+            <values>
+                <fullName>After Delete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>After Insert</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>After Undelete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>After Update</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Before Delete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Before Insert</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Before Update</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type_of_Action__c</picklist>
+            <values>
+                <fullName>Final Approval Actions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Final Rejection Actions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Initial Submission Actions</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

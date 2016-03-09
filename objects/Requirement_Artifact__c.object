@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>It is a junction object which establishes many to many relationship between artifacts and requirement.</description>
+    <enableActivities>true</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Action_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>Action__r.RecordType.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Action Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Action__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>It consists of the actions being affected by the requirement.</description>
+        <externalId>false</externalId>
+        <label>Action</label>
+        <referenceTo>Action__c</referenceTo>
+        <relationshipLabel>Requirement</relationshipLabel>
+        <relationshipName>Requirement_Artifacts</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Approval_Process__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>It consists of the approval process being affected by the requirement.</description>
+        <externalId>false</externalId>
+        <label>Approval Process</label>
+        <referenceTo>Approval_Process__c</referenceTo>
+        <relationshipLabel>Requirement</relationshipLabel>
+        <relationshipName>Requirement_Artifacts</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Approval_Step__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>It consists of the approval step being affected by the requirement.</description>
+        <externalId>false</externalId>
+        <label>Approval Step</label>
+        <referenceTo>Approval_Step__c</referenceTo>
+        <relationshipLabel>Requirement</relationshipLabel>
+        <relationshipName>Requirement_Artifacts</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Change_Description__c</fullName>
+        <description>Changes taken place in the artifact due to requirement.</description>
+        <externalId>false</externalId>
+        <label>Change Description</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Changed_By__c</fullName>
+        <description>Who has made the modification in the component</description>
+        <externalId>false</externalId>
+        <label>Changed By</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Nitesh</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Deep</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Controller__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>It consists of the controller being affected by the requirement.</description>
+        <externalId>false</externalId>
+        <label>Controller</label>
+        <referenceTo>Controller__c</referenceTo>
+        <relationshipLabel>Requirement</relationshipLabel>
+        <relationshipName>Requirement_Artifacts</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Object__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>It consists of the object being affected by the requirement.</description>
+        <externalId>false</externalId>
+        <label>Object</label>
+        <referenceTo>Object__c</referenceTo>
+        <relationshipLabel>Requirement</relationshipLabel>
+        <relationshipName>Requirement_Artifacts</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Requirement_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>Requirement__r.RecordType.DeveloperName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Requirement Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Requirement__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>It captures the requirement affecting artifacts.</description>
+        <externalId>false</externalId>
+        <label>Requirement</label>
+        <referenceTo>Requirement__c</referenceTo>
+        <relationshipLabel>Requirement Artifacts</relationshipLabel>
+        <relationshipName>Requirement_Artifacts</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Trigger__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>It consists of the trigger being affected by the requirement.</description>
+        <externalId>false</externalId>
+        <label>Trigger</label>
+        <referenceTo>Trigger__c</referenceTo>
+        <relationshipLabel>Requirement</relationshipLabel>
+        <relationshipName>Requirement_Artifacts</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Validation_Rule__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>It consists of the validation rule being affected by the requirement.</description>
+        <externalId>false</externalId>
+        <label>Validation Rule</label>
+        <referenceTo>Validation_Rule__c</referenceTo>
+        <relationshipLabel>Requirement</relationshipLabel>
+        <relationshipName>Requirement_Artifacts</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Visualforce_Page__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>It consists of the vf page being affected by the requirement.</description>
+        <externalId>false</externalId>
+        <label>Visualforce Page</label>
+        <referenceTo>Visualforce_Page__c</referenceTo>
+        <relationshipLabel>Requirement</relationshipLabel>
+        <relationshipName>Requirement_Artifacts</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Workflow_Rule__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>It consists of the workflow rule being affected by the requirement.</description>
+        <externalId>false</externalId>
+        <label>Workflow Rule</label>
+        <referenceTo>Workflow_Rule__c</referenceTo>
+        <relationshipLabel>Requirement</relationshipLabel>
+        <relationshipName>Requirement_Artifacts</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <label>Requirement Artifact</label>
+    <nameField>
+        <displayFormat>RA-{0000}</displayFormat>
+        <label>Requirement Artifact Number</label>
+        <trackHistory>true</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Requirement Artifacts</pluralLabel>
+    <recordTypeTrackHistory>true</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Requirement_affecting_Action</fullName>
+        <active>true</active>
+        <label>Requirement affecting Action</label>
+        <picklistValues>
+            <picklist>Changed_By__c</picklist>
+            <values>
+                <fullName>Deep</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nitesh</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Requirement_affecting_Approval_Process</fullName>
+        <active>true</active>
+        <label>Requirement affecting Approval Process</label>
+        <picklistValues>
+            <picklist>Changed_By__c</picklist>
+            <values>
+                <fullName>Deep</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nitesh</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Requirement_affecting_Approval_Step</fullName>
+        <active>true</active>
+        <label>Requirement affecting Approval Step</label>
+        <picklistValues>
+            <picklist>Changed_By__c</picklist>
+            <values>
+                <fullName>Deep</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nitesh</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Requirement_affecting_Controller</fullName>
+        <active>true</active>
+        <label>Requirement affecting Controller</label>
+        <picklistValues>
+            <picklist>Changed_By__c</picklist>
+            <values>
+                <fullName>Deep</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nitesh</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Requirement_affecting_Object</fullName>
+        <active>true</active>
+        <label>Requirement affecting Object</label>
+        <picklistValues>
+            <picklist>Changed_By__c</picklist>
+            <values>
+                <fullName>Deep</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nitesh</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Requirement_affecting_Trigger</fullName>
+        <active>true</active>
+        <label>Requirement affecting Trigger</label>
+        <picklistValues>
+            <picklist>Changed_By__c</picklist>
+            <values>
+                <fullName>Deep</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nitesh</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Requirement_affecting_Validation_Rule</fullName>
+        <active>true</active>
+        <label>Requirement affecting Validation Rule</label>
+        <picklistValues>
+            <picklist>Changed_By__c</picklist>
+            <values>
+                <fullName>Deep</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nitesh</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Requirement_affecting_Visualforce_Page</fullName>
+        <active>true</active>
+        <label>Requirement affecting Visualforce Page</label>
+        <picklistValues>
+            <picklist>Changed_By__c</picklist>
+            <values>
+                <fullName>Deep</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nitesh</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Requirement_affecting_Workflow_Rule</fullName>
+        <active>true</active>
+        <label>Requirement affecting Workflow Rule</label>
+        <picklistValues>
+            <picklist>Changed_By__c</picklist>
+            <values>
+                <fullName>Deep</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nitesh</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

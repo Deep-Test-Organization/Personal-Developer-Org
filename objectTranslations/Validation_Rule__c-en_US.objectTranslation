@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Validation Rule</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Validation Rules</value>
+    </caseValues>
+    <fields>
+        <label><!-- Changed By --></label>
+        <name>Changed_By__c</name>
+        <picklistValues>
+            <masterLabel>Deep</masterLabel>
+            <translation><!-- Deep --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nitesh</masterLabel>
+            <translation><!-- Nitesh --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Error Condition Formula 1 --></label>
+        <name>Error_Condition_Formula_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Error Condition Formula 2 --></label>
+        <name>Error_Condition_Formula_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Error Condition Formula --></label>
+        <name>Error_Condition_Formula__c</name>
+    </fields>
+    <fields>
+        <label><!-- Error Message --></label>
+        <name>Error_Message__c</name>
+    </fields>
+    <fields>
+        <label><!-- Related to Object --></label>
+        <name>Related_to_Object__c</name>
+        <relationshipLabel><!-- Validation Rules --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Request --></label>
+        <name>Request__c</name>
+        <relationshipLabel><!-- Validation Rules --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Validation Rule Layout</layout>
+        <sections>
+            <label><!-- Constitutes of Error Condition Formula --></label>
+            <section>Constitutes of Error Condition Formula</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>
