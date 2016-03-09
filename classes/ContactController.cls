@@ -1,4 +1,5 @@
 public class ContactController {
+	// Additional comments added for test purpose
 	@AuraEnabled
     // Retrieve all contacts
     public static List<Contact> getContacts() {
